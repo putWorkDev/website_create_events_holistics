@@ -9,7 +9,7 @@ This is a monorepo with two applications:
 
 | App        | Stack                                                            | Location    |
 | ---------- | --------------------------------------------------------------- | ----------- |
-| Backend    | Spring Boot 3.3 · Kotlin · Gradle · PostgreSQL · Flyway · JWT    | `backend/`  |
+| Backend    | Spring Boot 4.0 · Kotlin · Gradle · PostgreSQL · Flyway · JWT    | `backend/`  |
 | Frontend   | React 18 · TypeScript · Vite · TailwindCSS                       | `frontend/` |
 
 ## Architecture

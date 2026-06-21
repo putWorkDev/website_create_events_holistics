@@ -12,7 +12,7 @@ data class PagedResponse<T>(
     val last: Boolean,
 ) {
     companion object {
-        fun <S, T> of(page: Page<S>, mapper: (S) -> T) = PagedResponse(
+        fun <S : Any, T : Any> of(page: Page<S>, mapper: (S) -> T) = PagedResponse(
             content = page.content.map(mapper),
             page = page.number,
             size = page.size,
