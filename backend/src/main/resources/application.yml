@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: holistics-events
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/holistics_events}
+    username: ${DB_USERNAME:holistics}
+    password: ${DB_PASSWORD:holistics}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: UTC
+    open-in-view: false
+    show-sql: false
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+
+server:
+  port: ${SERVER_PORT:8080}
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:ZHVtbXktc2VjcmV0LWtleS1mb3ItaG9saXN0aWNzLWV2ZW50cy1wbGF0Zm9ybS1jaGFuZ2UtbWU=}
+    expiration-ms: ${JWT_EXPIRATION_MS:86400000}
+  cors:
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:5173,http://localhost:3000}
+
+logging:
+  level:
+    org.springframework.security: INFO
+    com.holistics: DEBUG

@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-sand-50 text-forest-900 antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-forest-600 px-6 py-3 font-semibold text-white shadow-sm transition hover:bg-forest-700 focus:outline-none focus:ring-2 focus:ring-forest-400 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-forest-600 px-6 py-3 font-semibold text-forest-700 transition hover:bg-forest-50 focus:outline-none focus:ring-2 focus:ring-forest-400;
+  }
+
+  .input-field {
+    @apply w-full rounded-xl border border-sand-300 bg-white px-4 py-2.5 text-forest-900 shadow-sm transition focus:border-forest-500 focus:outline-none focus:ring-2 focus:ring-forest-200;
+  }
+
+  .card {
+    @apply rounded-2xl border border-sand-200 bg-white shadow-sm;
+  }
+}
